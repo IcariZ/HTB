@@ -26,5 +26,7 @@ i tried to put a random URL into the input bar and it redirects me into the site
 
 so i tried to use [webhook](https://webhook.site/) to send the request that exec the `FetchServerInfo`<br>
 use the edit button on the top right of the website to edit the body of my request.<br>
+![here](https://github.com/IcariZ/HTB/blob/main/picSource/RendQ/RenderQ2.png)
 
+after that i put the link into the input bar from target web and it returns the command. then i can just cd through directory and find the flag file
 
