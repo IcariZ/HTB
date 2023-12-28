@@ -27,6 +27,9 @@ Result should be the following
   ```
 
 after visiting the web and clicking alot of button, i find `data.analytical.htb` when login is pressed, which is a metabase framework for authentication 
+![here](https://github.com/IcariZ/HTB/blob/main/picSource/Analytic/LoginPage.png)
+
+try to search some CVE related to metabase auth and landed with [this one](https://github.com/m3m0o/metabase-pre-auth-rce-poc)
 
 
 
