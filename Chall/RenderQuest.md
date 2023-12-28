@@ -1,6 +1,22 @@
-Given IP: ``
+# RenderQuest
+Given IP: `167.99.85.216:32282`
 
 
-Landing page with a few text and input box as following
+Landing page with a few text and input box as follows
 
 ![here1](https://github.com/IcariZ/HTB/blob/main/picSource/RendQ/RenderQ1.png)
+
+download the zip file and skim through the files and directories and found `main.go` under /challenge/
+i tried to understand the function and how it works and the most interesting one is:
+```
+func (p RequestData) FetchServerInfo(command string) string {
+	out, err := exec.Command("sh", "-c", command).Output()
+	if err != nil {
+		return ""
+	}
+	return string(out)
+}
+```
+which lets you exec a bash command.
+<br>
+continue poking around but on the webpage.
