@@ -70,3 +70,18 @@ OLDPWD=/app
 then i login through ssh and gained metalytics user
 
 ![here3](https://github.com/IcariZ/HTB/blob/main/picSource/Analytic/userGained.png)
+
+found the user then moved to root.
+
+tried `sudo -l` and is not working, so i look into the linux and kernel version which is as the following
+```
+metalytics@analytics:~$ uname -r
+6.2.0-25-generic
+metalytics@analytics:~$ uname -a
+Linux analytics 6.2.0-25-generic #25~22.04.2-Ubuntu SMP PREEMPT_DYNAMIC Wed Jun 28 09:55:23 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+metalytics@analytics:~$ 
+```
+
+aaand i search more exploit around the known version. Luckily there is [this script](https://github.com/g1vi/CVE-2023-2640-CVE-2023-32629/blob/main/README.md) that can escalate privilege because the lack of permission checking.
+
+i ran the script and the machine is PWNed
