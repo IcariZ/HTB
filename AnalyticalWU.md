@@ -69,5 +69,4 @@ OLDPWD=/app
 
 then i login through ssh and gained metalytics user
 
-!(here2)[https://github.com/IcariZ/HTB/blob/main/picSource/Analytic/userGained.png]
-
+![here3](https://github.com/IcariZ/HTB/blob/main/picSource/Analytic/userGained.png)
