@@ -31,7 +31,43 @@ after visiting the web and clicking alot of button, i find `data.analytical.htb`
 
 try to search some CVE related to metabase auth and landed with [this one](https://github.com/m3m0o/metabase-pre-auth-rce-poc)
 
+run the script and gained metabase user. Clearly this user is not the target cuz there is no flag here.
 
+i search some dir and found creds under `/proc/self/env`:
 
+```
+SHELL=/bin/sh                                                                                                                                                                                                                                
+MB_DB_PASS=                                                                                                                                                                                                                                  
+HOSTNAME=d4267d67e71a                                                                                                                                                                                                                        
+LANGUAGE=en_US:en                                                                                                                                                                                                                            
+MB_JETTY_HOST=0.0.0.0                                                                                                                                                                                                                        
+JAVA_HOME=/opt/java/openjdk                                                                                                                                                                                                                  
+MB_DB_FILE=//metabase.db/metabase.db                                                                                                                                                                                                         
+PWD=/proc/self                                                                                                                                                                                                                               
+LOGNAME=metabase                                                                                                                                                                                                                             
+MB_EMAIL_SMTP_USERNAME=                                                                                                                                                                                                                      
+HOME=/home/metabase                                                                                                                                                                                                                          
+LANG=en_US.UTF-8                                                                                                                                                                                                                             
+META_USER=metalytics                                                                                                                                                                                                                         
+META_PASS=An4lytics_ds20223#                                                                                                                                                                                                                 
+MB_EMAIL_SMTP_PASSWORD=                                                                                                                                                                                                                      
+USER=metabase                                                                                                                                                                                                                                
+SHLVL=4
+MB_DB_USER=
+FC_LANG=en-US
+LD_LIBRARY_PATH=/opt/java/openjdk/lib/server:/opt/java/openjdk/lib:/opt/java/openjdk/../lib
+LC_CTYPE=en_US.UTF-8
+MB_LDAP_BIND_DN=
+LC_ALL=en_US.UTF-8
+MB_LDAP_PASSWORD=
+PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MB_DB_CONNECTION_URI=
+JAVA_VERSION=jdk-11.0.19+7
+_=/usr/bin/env
+OLDPWD=/app
+```
 
+then i login through ssh and gained metalytics user
+
+!(here2)[https://github.com/IcariZ/HTB/blob/main/picSource/Analytic/userGained.png]
 
