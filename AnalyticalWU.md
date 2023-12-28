@@ -26,3 +26,9 @@ Result should be the following
   Nmap done: 1 IP address (1 host up) scanned in 26.55 seconds
   ```
 
+after visiting the web and clicking alot of button, i find `data.analytical.htb` when login is pressed, which is a metabase framework for authentication 
+
+
+
+
+
