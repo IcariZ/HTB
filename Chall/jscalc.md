@@ -29,4 +29,9 @@ we know that the file is located in root dir, we can use `process.chdir('..')` t
 
 last we call fs module so we can read files with `readFileSync()`
 FINAL payload => `require('fs').readFileSync('/flag.txt').toString()`
+<details>
+  <summary>flag here</summary>
+
 ![here4](https://github.com/IcariZ/HTB/blob/main/picSource/jscalc/jscalc3.png)
+</details>
+
