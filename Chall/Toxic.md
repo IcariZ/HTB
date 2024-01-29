@@ -31,5 +31,10 @@ changing the user-agent from the header request with ``<?php system('ls /')?>``
 we get as a respond
 ![image](https://github.com/IcariZ/HTB/assets/89731969/69636579-2451-439f-8120-0ad5a82c81c1)
 
+finally we know what file should we access 
+change the user header into ``<?php system('cat /flag_vQTe7')?>`` and send the request again
+
+![image](https://github.com/IcariZ/HTB/assets/89731969/1310a6d2-3293-4af6-ad0b-064b5e105fe7)
+
 
 
