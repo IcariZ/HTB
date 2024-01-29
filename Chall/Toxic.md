@@ -23,6 +23,13 @@ let's try to access ``/etc/passwd`` by tweaking the cookie to
 we get 
 ![image](https://github.com/IcariZ/HTB/assets/89731969/d6d3c475-cab0-42d5-a1ac-c8c7f10b8b15)
 
+we can use log file poisoning to yield what is inside the machine with:
+changing the user-agent from the header request with ``<?php system('ls /')?>``
+
+![image](https://github.com/IcariZ/HTB/assets/89731969/b6429eb9-0bb4-4d2f-92e2-a5fa123cb5b7)
+
+we get as a respond
+![image](https://github.com/IcariZ/HTB/assets/89731969/69636579-2451-439f-8120-0ad5a82c81c1)
 
 
 
