@@ -7,7 +7,7 @@ a website that has an exposed input on the url bar
 tempering the parameter, we found that we can give any input string we want.
 ![image](https://github.com/IcariZ/HTB/assets/89731969/c085d7e2-07ed-4014-9631-0d1b25c960aa)
 
-from the source code, anything that is in format is being process by giving slashes to prevent some malicious input
+from the source code, under TimeModel.php, anything that is in format is being process by giving slashes to prevent some malicious input
 then being executed in eval statement
 
 we can use this to get a shell
